@@ -1,3 +1,4 @@
+#/bin/bash
 PATH=~/bin:$PATH
 echo -e '\e[91mThis build still contains test code. Not for daily use. Devs Only.\e[0m'
 echo -e '\e[104mStarting AOSiP Helper Bot Updater (v0.0.2) Press any key to clear the terminal and continue\e[0m'
