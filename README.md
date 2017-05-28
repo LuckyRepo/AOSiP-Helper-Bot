@@ -1,5 +1,6 @@
 # AOSiP-Helper-Bot
 Shell script to help with syncing, building or initializing AOSiP
+Created for lazy people who build on Linux.
 
 Getting Started
 ---------------
