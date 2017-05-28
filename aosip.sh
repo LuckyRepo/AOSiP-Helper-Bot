@@ -3,7 +3,7 @@ echo -e '\e[32mThis version uses SLEEP to allow for easy reading. 1 second delay
 echo -e '\e[104mStarting AOSiP Helper. Press any key to clear the terminal and continue\e[0m'
 read -n 1 -s
 clear
-echo -e '\e[104mBuild and Sync Script v0.9.1 for AOSiP\e[0m'
+echo -e '\e[104mBuild and Sync Script v0.9.2 for AOSiP\e[0m'
 echo -e '\e[91mThis build still contains test code. Not for daily use. Devs Only.\e[0m'
 PATH=~/bin:$PATH
 echo -e '\e[96mHelper Bot just changed BIN Path to current folder to allow for Repo commands\e[0m'
