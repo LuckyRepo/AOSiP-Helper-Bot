@@ -14,7 +14,6 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Sync Repo")
-echo -e "Default \e[32mGreen"
             echo -e '\e[104mYou chose to sync\e[0m'
             sleep 2
             echo -e '\e[32mStarting sync without using sync.sh\e[0m'
