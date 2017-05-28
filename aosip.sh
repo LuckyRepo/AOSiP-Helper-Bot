@@ -26,9 +26,9 @@ do
             echo -e '\e[32mMarking start of build\e[0m'
             sleep 2
             source build/envsetup.sh
-            echo -e '\e[32mPerforming lunch and setting Angler to current device\e[0m'
+            echo -e '\e[32mPerforming lunch and letting user choose from Menu\e[0m'
             sleep 2
-            lunch aosip_angler-userdebug
+            lunch
             echo -e '\e[32mStarting build\e[0m'
             sleep 2
             time mka kronic
@@ -50,10 +50,12 @@ do
             ;;
         "Initialize AOSiP repo")
             echo -e '\e[104mYou are about to Initialize AOSiP\e[0m'
-            sleep 2
+            sleep 1
+	    echo -e '\e[91mPress any key to confirm you want to Initialize AOSiP\e[0m'
+	    read -n 1 -s
             echo -e '\e[32mSetting nougat-mr2 as your branch\e[0m'
             repo init -u ssh://git@github.com/AOSiP/platform_manifest.git -b nougat-mr2
-            echo -e '\e[32mRepo ready to go\e[0m'            
+            echo -e '\e[32mRepo ready to go\e[0m' 
 
             continue
             ;;
