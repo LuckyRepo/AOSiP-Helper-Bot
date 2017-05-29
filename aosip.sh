@@ -9,7 +9,7 @@ PATH=~/bin:$PATH
 echo -e '\e[96mHelper Bot just changed BIN Path to current folder to allow for Repo commands\e[0m'
 echo -e '\e[32mOffering choices to either Sync, Build or Quit\e[0m'
 PS3='Please enter your choice: '
-options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Initialize AOSiP Repo" "Quit")
+options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Initialize Repo" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -58,7 +58,7 @@ do
 			echo -e '\e[91mAuto Build will now exit.\e[0m'
 			exit
             ;;
-        "Initialize AOSiP repo")
+        "Initialize Repo")
             echo -e '\e[104mYou are about to Initialize AOSiP\e[0m'
             sleep 1
 	    echo -e '\e[91mPress any key to confirm you want to Initialize AOSiP\e[0m'
