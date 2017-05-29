@@ -19,6 +19,7 @@ echo -e '\e[104mPress any key to clear the terminal and continue\e[0m'
 		sleep 1
 		cd $OLDPWD
 		mv AOSiP-Helper-Bot/aosip.sh $PWD
+		sudo chmod 777 aosip.sh
 		echo -e '\e[96mScript Updated. Press any key to quit.\e[0m'
 		read -n 1 -s
 	exit
