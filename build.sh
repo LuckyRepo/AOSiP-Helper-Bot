@@ -1,5 +1,5 @@
 #/bin/bash
-echo -e '\e[104mSuper Lazy Open Build Script v0.0.2 for AOSiP\e[0m'
+echo -e '\e[104mSuper Lazy Open Build Script v0.0.2-b for AOSiP\e[0m'
 line=$(head -n 1 buildpath.txt)
 cd $line
 PS3='Please enter your choice: '
@@ -17,7 +17,7 @@ do
             ;;
             
         "Check for updates")
-        echo -e '\e[32mSLaunching the updater script\e[0m'
+        echo -e '\e[32mLaunching the updater script\e[0m'
         sleep 1
         clear
             ./update_AHS.sh
