@@ -3,7 +3,7 @@ Shell script to help with syncing, building or initializing AOSiP. Created for l
 
 Getting Started
 ---------------
-To install, change to you build directory for AOSiP
+To install, change to your build directory for AOSiP, then enter the following
 ```bash
 git clone https://github.com/airwa1kin7/AOSiP-Helper-Bot
 ```
@@ -13,6 +13,7 @@ We now should move the script to our build folder to make things easy.
 mv AOSiP-Helper-Bot/aosip.sh $PWD
 chmod 777 aosip.sh
 ```
+Changing the permissions on the script is important. If you don't then you won't be able to run the script.
 
 Using The Script
 ---------------
@@ -30,7 +31,7 @@ mv AOSiP-Helper-Bot/update_AHS.sh $PWD
 chmod 777 update_AHS.sh
 ./update_AHS.sh
 ```
-This is only grabbing the helper script if changes have been made. Otherwise it will fail to move files until I change how it handles the error.
+This is only grabbing the helper script if changes have been made. Otherwise it let you know everything is up to date.
 
 Updating Script (The old way)
 ---------------
@@ -40,7 +41,7 @@ Change to your AOSiP build directory (example "cd ~/build/AOSiP") then type
 ```bash
 cd AOSiP-Helper-Bot
 ```
-This will change you to the cloned Helper Bot folder.
+This will change the directory to the one you cloned.
 ```bash
 git pull
 ```
@@ -49,3 +50,14 @@ The helper bot will now be updated from Github.
 cd $OLDPWD
 mv AOSiP-Helper-Bot/aosip.sh $PWD
 ```
+
+To Do List
+---------------
+Create beginners script for a fresh Linux server install.
+Add error handling for main helper script.
+Create a cleaner menu.
+Make a super lazy root folder script for remote build servers to save time on typing long build paths.
+
+Bugs
+---------------
+You tell me.
