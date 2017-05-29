@@ -1,7 +1,7 @@
 #/bin/bash
 PATH=~/bin:$PATH
 echo -e '\e[91mThis build still contains test code. Not for daily use. Devs Only.\e[0m'
-echo -e '\e[104mStarting AOSiP Helper Bot Updater v0.0.2\e[0m'
+echo -e '\e[104mStarting AOSiP Helper Bot Updater v0.0.3\e[0m'
 echo -e '\e[104mPress any key to clear the terminal and continue\e[0m'
 	read -n 1 -s
 	clear
@@ -20,6 +20,8 @@ echo -e '\e[104mPress any key to clear the terminal and continue\e[0m'
 		cd $OLDPWD
 		mv AOSiP-Helper-Bot/aosip.sh $PWD
 		sudo chmod 777 aosip.sh
+		mv AOSiP-Helper-Bot/update_AHS.sh $PWD
+		sudo chmod 777 update_AHS.sh
 		echo -e '\e[96mScript Updated. Press any key to quit.\e[0m'
 		read -n 1 -s
 	exit
