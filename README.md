@@ -13,6 +13,12 @@ We now should move the script to our build folder to make things easy.
 mv AOSiP-Helper-Bot/aosip.sh $PWD
 chmod 777 aosip.sh
 ```
+We should also move the script for updating the Helper Bot while we are here.
+```bash
+mv AOSiP-Helper-Bot/update_AHS.sh $PWD
+chmod 777 update_AHS.sh
+```
+
 Changing the permissions on the script is important. If you don't then you won't be able to run the script.
 
 Using The Script
@@ -27,13 +33,11 @@ That's it.
 Updating Script (Easy Way)
 ---------------
 ```bash
-mv AOSiP-Helper-Bot/update_AHS.sh $PWD
-chmod 777 update_AHS.sh
 ./update_AHS.sh
 ```
 This is only grabbing the helper script if changes have been made. Otherwise it let you know everything is up to date.
 
-Updating Script (The old way)
+Updating Script (Manually)
 ---------------
 
 Because we cloned the bot we need to get funky in order to update.
