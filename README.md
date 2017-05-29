@@ -37,7 +37,7 @@ Updating Script (Easy Way)
 ```
 This is only grabbing the helper script if changes have been made. Otherwise it let you know everything is up to date.
 
-Super Lazy Build Script for AOSiP
+Super Lazy Open Build Script for AOSiP
 ---------------
 Changing to your build path each time you log on to your build server can be a chore. Let's be even more lazy.
 - Launch or Update AOSiP-Helper-Bot from the root directory
@@ -48,7 +48,7 @@ cd ~
 chmod 777 build.sh
 ```
 
-You can now use the SLBS. Now instead of launching from your build directory with aosp.sh and updating with update_AHS.sh you can use the build.sh from your root directory by entering the following.
+You can now use the SLOBS. Now instead of launching from your build directory with aosp.sh and updating with update_AHS.sh you can use the build.sh from your root directory by entering the following.
 
 ```bash
 ./build.sh
