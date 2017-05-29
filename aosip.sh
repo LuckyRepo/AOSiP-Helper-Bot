@@ -9,7 +9,7 @@ PATH=~/bin:$PATH
 echo -e '\e[96mHelper Bot just changed BIN Path to current folder to allow for Repo commands\e[0m'
 echo -e '\e[32mOffering choices to either Sync, Build or Quit\e[0m'
 PS3='Please enter your choice: '
-options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Dev Test" "Initialize AOSiP repo" "Quit")
+options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Initialize AOSiP Repo" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -53,20 +53,6 @@ do
 		echo -e '\e[32mGot ingredients for making Lunch. Time to cook\e[0m'
 			sleep 1
 		time mka kronic
-            
-            ;;
-        "Dev Test")
-            echo -e '\e[104mStarting Dev Test Print Out\e[0m'
-            sleep 1
-            echo 'normal text'
-            sleep 1
-            echo -e '\e[32mPerforming an action text\e[0m'
-            sleep 1
-            echo -e '\e[96mAction performed by bot text\e[0m'
-            sleep 1
-            echo -e '\e[91mDev Warning text\e[0m'
-            sleep 1
-            echo 'Dev Text Test Complete'
             
             ;;
         "Initialize AOSiP repo")
