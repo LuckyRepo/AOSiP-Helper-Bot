@@ -37,10 +37,28 @@ Updating Script (Easy Way)
 ```
 This is only grabbing the helper script if changes have been made. Otherwise it let you know everything is up to date.
 
+Super Lazy Build Script for AOSiP
+---------------
+Changing to your build path each time you log on to your build server can be a chore. Let's be even more lazy.
+- Launch or Update AOSiP-Helper-Bot from the root directory
+
+```bash
+mv AOSiP-Helper-Bot/build.sh /root
+cd ~
+chmod 777 build.sh
+```
+
+You can now use the SLBS. Now instead of launching from your build directory with aosp.sh and updating with update_AHS.sh you can use the build.sh from your root directory by entering the following.
+
+```bash
+./build.sh
+```
+
+
 Updating Script (Manually)
 ---------------
 
-Because we cloned the bot we need to get funky in order to update.
+Because we cloned the bot we need to get funky in order to update manually.
 Change to your AOSiP build directory (example "cd ~/build/AOSiP") then type
 ```bash
 cd AOSiP-Helper-Bot
@@ -54,13 +72,6 @@ The helper bot will now be updated from Github.
 cd $OLDPWD
 mv AOSiP-Helper-Bot/aosip.sh $PWD
 ```
-
-To Do List
----------------
-Create beginners script for a fresh Linux server install.
-Add error handling for main helper script.
-Create a cleaner menu.
-Make a super lazy root folder script for remote build servers to save time on typing long build paths.
 
 Bugs
 ---------------
