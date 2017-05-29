@@ -3,8 +3,8 @@ echo -e '\e[32mThis version uses SLEEP to allow for easy reading. 1 second delay
 echo -e '\e[104mStarting AOSiP Helper. Press any key to clear the terminal and continue\e[0m'
 read -n 1 -s
 clear
-echo -e '\e[104mBuild and Sync Script v0.9.3 for AOSiP\e[0m'
-echo -e '\e[91mThis build still contains test code. Not for daily use. Devs Only.\e[0m'
+echo -e '\e[104mBuild and Sync Script v0.9.4 for AOSiP\e[0m'
+echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 PATH=~/bin:$PATH
 echo -e '\e[96mHelper Bot just changed BIN Path to current folder to allow for Repo commands\e[0m'
 echo -e '\e[32mOffering choices to either Sync, Build or Quit\e[0m'
@@ -36,11 +36,12 @@ do
             ;;
         "Auto Sync and Build")
             echo -e '\e[104mStarting Full Auto Mode\e[0m'
-	    echo -e '\e[91mYou will now be asked for your device name. Enter it when prompted. (Example angler)\e[0m'
+	    echo -e '\e[91mYou will now be asked for your device name. Enter it when prompted.\e[0m'
+	    echo -e '\e[32mFor example you can enter\e[0m' '\e[91mangler\e[0m' '\e[32mif you want to build for the Huawei 6P\e[0m'
 	    sleep 1
             # devicename="USER INPUT"
 		read -p "Enter your device code name: " devicename
-		echo -e '\e[32mYou are going to build for $devicename\e[0m'
+		echo -e '\e[32mYou are going to build for' $devicename '\e[32mdevice model\e[0m'
 		sleep 1
 	    echo -e '\e[32mStarting sync without using sync.sh\e[0m'
             sleep 1
@@ -53,7 +54,9 @@ do
 		echo -e '\e[32mGot ingredients for making Lunch. Time to cook\e[0m'
 			sleep 1
 		time mka kronic
-            
+			echo -e '\e[32mIf build was successful then you should have a finished ROM in your OUT folder.\e[0m'
+			echo -e '\e[91mAuto Build will now exit.\e[0m'
+			exit
             ;;
         "Initialize AOSiP repo")
             echo -e '\e[104mYou are about to Initialize AOSiP\e[0m'
