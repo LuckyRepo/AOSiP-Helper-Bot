@@ -36,6 +36,12 @@ echo -e '\e[104mPress any key to clear the terminal and continue\e[0m'
   			else
   			echo -e '\e[91mSLOBS Updated.\e[0m'
 			fi
+#Setup Script Move
+			if mv AOSiP-Helper-Bot/start.sh $PWD | grep -q "mv: cannot stat 'AOSiP-Helper-Bot/start.sh': No such file or directory"; then
+  			echo -e '\e[91mSetup Script did not need to be updated.\e[0m'
+  			else
+  			echo -e '\e[91mSetup Script Updated.\e[0m'
+			fi
 # Change Permissions
 		sudo chmod 777 aosip.sh
 		sudo chmod 777 /root/build.sh
