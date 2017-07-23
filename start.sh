@@ -1,10 +1,14 @@
 #/bin/bash
+	cd ~
         clear
     echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
     echo -e '\e[91mCurrently built for Ubuntu 15. Any other version and your on your own.\e[0m'
     echo
     echo
 #AOSiP needs SSH keys.
+  read -p "Enter your GitHub Account email: " gitmail
+  echo $gitmail >> gitmail.txt
+	echo -e '\e[32mYour GitHub Email is' $gitmail '\e[32m\e[0m'
 		echo "Y" | ~/build/aosip/ssh.sh
 		echo -e '\e[96mDownload and open "id_rsa.pub" from "~/.ssh" on your server.\e[0m'
 		echo -e '\e[96mEnter it into github under settings and SSH keys.\e[0m'
@@ -22,7 +26,7 @@
 	line=$(head -n 1 buildpath.txt)
 	cd $line
 # Time to get to work
-    echo -e '\e[104mAOSiP Server Setup Script v0.0.2 for AOSiP\e[0m'
+    echo -e '\e[104mAOSiP Server Setup Script v0.0.4 for AOSiP\e[0m'
 # Make build directory
     mkdir ~/build
     mkdir ~/build/aosip
