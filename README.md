@@ -1,7 +1,15 @@
 # AOSiP-Helper-Bot
 Shell script to help with syncing, building or initializing AOSiP. Created for lazy people who build on Linux.
 
-Getting Started
+Quick Setup (Alpha)
+---------------
+```bash
+wget https://raw.githubusercontent.com/airwa1kin7/AOSiP-Helper-Bot/nougat-mr2/start.sh
+chmod 777 start.sh
+./start.sh
+```
+
+Getting Started (If quicksetup doesn't work)
 ---------------
 To install, change to your build directory for AOSiP, then enter the following
 ```bash
