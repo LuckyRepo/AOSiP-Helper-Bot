@@ -1,7 +1,8 @@
 #/bin/bash
-echo -e '\e[104mSuper Lazy Open Build Script v0.0.2-b for AOSiP\e[0m'
+echo -e '\e[104mSuper Lazy Open Build Script v0.0.2-c for AOSiP\e[0m'
 line=$(head -n 1 buildpath.txt)
 cd $line
+# Create a Main Menu
 PS3='Please enter your choice: '
 options=("AOSiP Helper Script" "Check for updates" "Setup" "Quit")
 select opt in "${options[@]}"
