@@ -1,17 +1,17 @@
 #/bin/bash
-echo -e '\e[32mThis version uses SLEEP to allow for easy reading. 1 second delay is normal operation\e[0m'
-echo -e '\e[104mStarting AOSiP Helper. Press any key to clear the terminal and continue\e[0m'
-read -n 1 -s
-clear
-echo -e '\e[104mBuild and Sync Script v0.9.4 for AOSiP\e[0m'
-echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
-PATH=~/bin:$PATH
-echo -e '\e[96mHelper Bot just changed BIN Path to current folder to allow for Repo commands\e[0m'
-# Create a main menu.
-echo -e '\e[32mOffering choices to either Sync, Build or Quit\e[0m'
-PS3='Please enter your choice: '
-options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Initialize Repo" "Quit")
-select opt in "${options[@]}"
+	echo -e '\e[32mThis version uses SLEEP to allow for easy reading. 1 second delay is normal operation\e[0m'
+	echo -e '\e[104mStarting AOSiP Helper. Press any key to clear the terminal and continue\e[0m'
+	read -n 1 -s
+	clear
+	echo -e '\e[104mBuild and Sync Script v0.9.4d for AOSiP\e[0m'
+	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
+	PATH=~/bin:$PATH
+	echo -e '\e[96mHelper Bot just changed BIN Path to current folder to allow for Repo commands\e[0m'
+# Create a main menu with actions
+	echo -e '\e[32mOffering choices to either Sync, Build or Quit\e[0m'
+	PS3='Please enter your choice: '
+	options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Initialize Repo" "Quit")
+	select opt in "${options[@]}"
 do
     case $opt in
         "Sync Repo")
