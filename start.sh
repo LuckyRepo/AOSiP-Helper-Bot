@@ -1,13 +1,25 @@
 #/bin/bash
-clear
+        clear
     echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
     echo -e '\e[91mCurrently built for Ubuntu 15. Any other version and your on your own.\e[0m'
     echo
     echo
-echo -e '\e[104mAOSiP Server Setup Script v0.0.1 for AOSiP\e[0m'
+# Delete buildpath.txt to avoid errors
+        rm -rf buildpath.txt
+# Assign the build path from AOSiP build folder
+        echo -e '\e[96mSetting up SLOBS.\e[0m'
+            echo ~/build/aosip >> buildpath.txt
+        echo -e '\e[96mStored build path. Your settings are saved.\e[0m'
+    pause 2
+        clear
+# Assign the build path on launch
+	line=$(head -n 1 buildpath.txt)
+	cd $line
+# Time to get to work
+    echo -e '\e[104mAOSiP Server Setup Script v0.0.2 for AOSiP\e[0m'
 # Make build directory
-  mkdir ~/build
-  mkdir ~/build/aosip
+    mkdir ~/build
+    mkdir ~/build/aosip
     echo -e '\e[96mCreated build directory\e[0m'
   cd ~/build/aosip
     echo -e '\e[96mChanged directory\e[0m'
