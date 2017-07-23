@@ -1,12 +1,13 @@
 #/bin/bash
-echo -e '\e[104mSuper Lazy Open Build Script v0.0.2-c for AOSiP\e[0m'
-line=$(head -n 1 buildpath.txt)
-cd $line
-# Create a Main Menu
-PS3='Please enter your choice: '
-options=("AOSiP Helper Script" "Check for updates" "Setup" "Quit")
-select opt in "${options[@]}"
-do
+	echo -e '\e[104mSuper Lazy Open Build Script v0.0.2-d for AOSiP\e[0m'
+# Assign the build path on launch
+	line=$(head -n 1 buildpath.txt)
+	cd $line
+# Create a Main Menu with actions
+	PS3='Please enter your choice: '
+	options=("AOSiP Helper Script" "Check for updates" "Setup" "Quit")
+	select opt in "${options[@]}"
+	do
     case $opt in
 
         "AOSiP Helper Script")
@@ -25,12 +26,15 @@ do
             exit
             ;;
         "Setup")
+# Delete buildpath.txt to avoid errors
         rm -rf buildpath.txt
         echo -e '\e[96mSetting up SLOBS. Deleted buildpath.txt\e[0m'
+# Assign the build path from AOSiP build folder
     		read -p "Enter your build path for AOSiP: " buildpath
     		echo $buildpath >> buildpath.txt
         echo -e '\e[96mStored build path. Your settings are saved.\e[0m'
         echo -e '\e[91mSLOBS is now auto shutting down. Relaunch to see settings applied.\e[0m'	
+# Shutdown to avoid errors
     		sleep 1
     		exit
 			;;
