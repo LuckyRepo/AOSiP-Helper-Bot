@@ -24,7 +24,7 @@
         echo -e '\e[96mSetting up SLOBS.\e[0m'
             echo ~/build/aosip >> buildpath.txt
         echo -e '\e[96mStored build path. Your settings are saved.\e[0m'
-    pause 2
+    sleep 2
         clear
 # Assign the build path on launch
 	line=$(head -n 1 buildpath.txt)
@@ -38,7 +38,7 @@
   curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
   chmod a+x ~/bin/repo
     echo -e '\e[96mInstalled Repo\e[0m'
-  pause 1
+  sleep 1
 
 # Set up AOSiP Help Bot from Github
     echo ----------------------------------
