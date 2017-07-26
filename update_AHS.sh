@@ -40,9 +40,9 @@ echo -e '\e[104mStarting AOSiP Helper Bot Updater v0.0.5b\e[0m'
   			echo -e '\e[91mSetup Script Updated.\e[0m'
 			fi
 # Change Permissions
-		sudo chmod 777 aosip.sh
-		sudo chmod 777 /root/build.sh
-		sudo chmod 777 update_AHS.sh
+		chmod 777 aosip.sh
+		chmod 777 /root/build.sh
+		chmod 777 update_AHS.sh
 		echo -e '\e[96mScript Updated. Press any key to quit.\e[0m'
 		read -n 1 -s
 	exit
