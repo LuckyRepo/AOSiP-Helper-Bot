@@ -34,10 +34,11 @@
 # Time to get to work
     echo -e '\e[104mAOSiP Server Setup Script v0.0.4 for AOSiP\e[0m'
 # Update install manifest, install JDK 8 and Curl
-  sudo apt-get update
+  apt-get update
     echo -e '\e[96mInstalling JDK 8\e[0m'
-  sudo apt-get install curl
-  sudo apt-get install openjdk-8-jdk
+  apt-get install curl
+  apt-get install openjdk-8-jdk
+  apt-get install git
     echo -e '\e[96mInstalled JDK 8\e[0m'
 # Install repo commands and set BIN path to build path
   mkdir ~/bin
