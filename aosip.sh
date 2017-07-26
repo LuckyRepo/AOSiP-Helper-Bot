@@ -5,6 +5,7 @@
 	clear
 	echo -e '\e[104mBuild and Sync Script v0.9.4d for AOSiP\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
+	cd ~/build/aosip
 	PATH=~/bin:$PATH
 	echo -e '\e[96mHelper Bot just changed BIN Path to current folder to allow for Repo commands\e[0m'
 # Create a main menu with actions
