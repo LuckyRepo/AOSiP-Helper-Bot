@@ -17,9 +17,7 @@
 	echo -e '\e[32mYour GitHub Email is' $gitmail '\e[32m\e[0m'
 		echo "Y" | ~/build/aosip/ssh.sh
 		echo -e '\e[96mDownload and open "id_rsa.pub" from "~/.ssh" on your server.\e[0m'
-		echo -e '\e[96mEnter it into github under settings and SSH keys.\e[0m'
-		echo -e '\e[96mContinue here after you have done that.\e[0m'
-		pause	
+	git config --global user.email "$gitmail"
 # Delete buildpath.txt to avoid errors
         rm -rf buildpath.txt
 # Assign the build path from AOSiP build folder
