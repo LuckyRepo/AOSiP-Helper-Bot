@@ -5,6 +5,12 @@
     echo -e '\e[91mCurrently built for Ubuntu 15. Any other version and your on your own.\e[0m'
     echo
     echo
+# Make build directory
+    mkdir ~/build
+    mkdir ~/build/aosip
+    echo -e '\e[96mCreated build directory\e[0m'
+  cd ~/build/aosip
+    echo -e '\e[96mChanged directory\e[0m'
 #AOSiP needs SSH keys.
   read -p "Enter your GitHub Account email: " gitmail
   echo $gitmail >> gitmail.txt
@@ -27,12 +33,6 @@
 	cd $line
 # Time to get to work
     echo -e '\e[104mAOSiP Server Setup Script v0.0.4 for AOSiP\e[0m'
-# Make build directory
-    mkdir ~/build
-    mkdir ~/build/aosip
-    echo -e '\e[96mCreated build directory\e[0m'
-  cd ~/build/aosip
-    echo -e '\e[96mChanged directory\e[0m'
 # Update install manifest, install JDK 8 and Curl
   sudo apt-get update
     echo -e '\e[96mInstalling JDK 8\e[0m'
