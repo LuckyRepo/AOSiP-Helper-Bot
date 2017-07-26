@@ -13,11 +13,13 @@
     echo -e '\e[96mChanged directory\e[0m'
 #AOSiP needs SSH keys.
   read -p "Enter your GitHub Account email: " gitmail
+  read -p "Enter your GitHub Account Name: " gitname
   echo $gitmail >> gitmail.txt
 	echo -e '\e[32mYour GitHub Email is' $gitmail '\e[32m\e[0m'
 		echo "Y" | ~/build/aosip/ssh.sh
 		echo -e '\e[96mDownload and open "id_rsa.pub" from "~/.ssh" on your server.\e[0m'
 	git config --global user.email "$gitmail"
+	git config --global user.name "$gitname"
 # Delete buildpath.txt to avoid errors
         rm -rf buildpath.txt
 # Assign the build path from AOSiP build folder
