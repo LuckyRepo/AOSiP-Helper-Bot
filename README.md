@@ -94,4 +94,4 @@ v16.04
 
 Unsupported Ubuntu Versions
 ---------------
-v14.04
+v14.xx
