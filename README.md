@@ -4,7 +4,7 @@ Shell script to help with syncing, building or initializing AOSiP. Created for l
 Quick Setup (Experimental)
 ---------------
 ```bash
-wget https://raw.githubusercontent.com/airwa1kin7/AOSiP-Helper-Bot/nougat-mr2/start.sh
+wget https://raw.githubusercontent.com/LuckyRepo/AOSiP-Helper-Bot/nougat-mr2/start.sh
 chmod 777 start.sh
 ./start.sh
 ```
@@ -13,7 +13,7 @@ Getting Started (If quicksetup doesn't work)
 ---------------
 To install, change to your build directory for AOSiP, then enter the following
 ```bash
-git clone https://github.com/airwa1kin7/AOSiP-Helper-Bot
+git clone https://github.com/LuckyRepo/AOSiP-Helper-Bot
 ```
 This cloned the repo to a folder called "AOSiP-Helper-Bot"
 We now should move the script to our build folder to make things easy.
