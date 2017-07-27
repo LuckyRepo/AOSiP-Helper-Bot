@@ -33,7 +33,7 @@
 	line=$(head -n 1 buildpath.txt)
 	cd $line
 # Time to get to work
-    echo -e '\e[104mAOSiP Server Setup Script v0.0.4 for AOSiP\e[0m'
+    echo -e '\e[104mAOSiP Server Setup Script v0.0.8 for AOSiP\e[0m'
 # Install repo commands and set BIN path to build path
   mkdir ~/bin
   PATH=~/bin:$PATH
@@ -42,7 +42,10 @@
   chmod a+x ~/bin/repo
     echo -e '\e[96mInstalled Repo\e[0m'
   sleep 1
-
+# Set Jack Server to use at least 6G otherwise fails on build with less
+	export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
+	./prebuilts/sdk/tools/jack-admin kill-server
+	./prebuilts/sdk/tools/jack-admin start-server
 # Set up AOSiP Help Bot from Github
     echo ----------------------------------
     echo -e '\e[96mSetting up AOSiP Help Bot\e[0m'
