@@ -84,3 +84,12 @@ mv AOSiP-Helper-Bot/aosip.sh $PWD
 Bugs
 ---------------
 You tell me.
+
+Supported Ubuntu Versions
+---------------
+v15.04
+v16.04
+
+Unsupported Ubuntu Versions
+---------------
+v14.04
