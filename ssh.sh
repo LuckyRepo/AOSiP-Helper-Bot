@@ -7,6 +7,3 @@
   apt-get install git
   apt-get install schedtool
     echo -e '\e[96mInstalled JDK 8\e[0m'
-# Assign gitmail
-	line=$(head -n 1 gitmail.txt)
-	ssh-keygen -t rsa -b 4096 -C "$line"
