@@ -1,6 +1,8 @@
 # AOSiP-Helper-Bot
 Shell script to help with syncing, building or initializing AOSiP. Created for lazy people who build on Linux.
 
+Use ~/build/aosip as your build folder. Quick Start will automatically set your build folder to ~/build/aosip for you.
+
 Quick Setup (Experimental)
 ---------------
 ```bash
