@@ -3,7 +3,7 @@
 	PATH=~/bin:$PATH
 # Usual blah blah blah
 echo -e '\e[91mThis build still contains test code. Not for daily use. Devs Only.\e[0m'
-echo -e '\e[104mStarting AOSiP Helper Bot Updater v0.0.5b\e[0m'
+echo -e '\e[104mStarting AOSiP Helper Bot Updater v1.0.0\e[0m'
 		cd AOSiP-Helper-Bot
 		echo -e '\e[96mHelper Bot just changed to Bot folder for updating the script\e[0m'
 		sleep 1
