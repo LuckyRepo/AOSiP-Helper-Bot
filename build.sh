@@ -1,5 +1,5 @@
 #/bin/bash
-	echo -e '\e[104mSuper Lazy Open Build Script v0.0.2-d for AOSiP\e[0m'
+	echo -e '\e[104mSuper Lazy Open Build Script v1.0.0-d for AOSiP\e[0m'
 	cd ~/build/aosip
 # Assign the build path on launch
 	line=$(head -n 1 buildpath.txt)
