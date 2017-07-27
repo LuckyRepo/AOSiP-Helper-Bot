@@ -3,7 +3,7 @@
 	echo -e '\e[104mStarting AOSiP Helper. Press any key to clear the terminal and continue\e[0m'
 	read -n 1 -s
 	clear
-	echo -e '\e[104mBuild and Sync Script v0.9.4d for AOSiP\e[0m'
+	echo -e '\e[104mBuild and Sync Script v0.9.5 for AOSiP\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 	cd ~/build/aosip
 	PATH=~/bin:$PATH
@@ -11,7 +11,7 @@
 # Create a main menu with actions
 	echo -e '\e[32mOffering choices to either Sync, Build or Quit\e[0m'
 	PS3='Please enter your choice: '
-	options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Initialize Repo" "Quit")
+	options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Build from Lunch" "Initialize Repo" "Quit")
 	select opt in "${options[@]}"
 do
     case $opt in
@@ -28,20 +28,23 @@ do
             echo -e '\e[32mMarking start of build\e[0m'
             sleep 1
             source build/envsetup.sh
-            echo -e '\e[32mPerforming lunch and letting user choose from Menu\e[0m'
-            sleep 1
-            lunch
+	    echo -e '\e[91mYou will now be asked for your device name. Enter it when prompted.\e[0m'
+	    echo -e '\e[32mFor example you can enter\e[0m' '\e[91mangler\e[0m' '\e[32mif you want to build for the Huawei 6P\e[0m'
+	    sleep 2
+	# devicename="USER INPUT"
+		read -p "Enter your device code name: " devicename
+		echo -e '\e[32mYou are going to build for' $devicename '\e[32mdevice model\e[0m'
             echo -e '\e[32mStarting build\e[0m'
-            sleep 1
+            sleep 2
             time mka kronic
-            
+            exit
             ;;
         "Auto Sync and Build")
             echo -e '\e[104mStarting Full Auto Mode\e[0m'
 	    echo -e '\e[91mYou will now be asked for your device name. Enter it when prompted.\e[0m'
 	    echo -e '\e[32mFor example you can enter\e[0m' '\e[91mangler\e[0m' '\e[32mif you want to build for the Huawei 6P\e[0m'
 	    sleep 1
-            # devicename="USER INPUT"
+	# devicename="USER INPUT"
 		read -p "Enter your device code name: " devicename
 		echo -e '\e[32mYou are going to build for' $devicename '\e[32mdevice model\e[0m'
 		sleep 1
@@ -59,6 +62,19 @@ do
 			echo -e '\e[32mIf build was successful then you should have a finished ROM in your OUT folder.\e[0m'
 			echo -e '\e[91mAuto Build will now exit.\e[0m'
 			exit
+            ;;
+        "Build from Lunch")
+            echo -e '\e[104mYou are about to build AOSiP using the lunch menu\e[0m'
+            echo -e '\e[32mMarking start of build\e[0m'
+            sleep 1
+            source build/envsetup.sh
+            echo -e '\e[32mPerforming lunch and letting user choose from Menu\e[0m'
+            sleep 1
+            lunch
+            echo -e '\e[32mStarting build\e[0m'
+            sleep 1
+            time mka kronic
+            exit
             ;;
         "Initialize Repo")
             echo -e '\e[104mYou are about to Initialize AOSiP\e[0m'
