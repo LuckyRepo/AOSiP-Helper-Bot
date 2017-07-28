@@ -22,6 +22,8 @@ do
             sleep 1
 			repo sync -c -f -j8 --force-sync --no-clone-bundle --no-tags
 			echo -e '\e[32mSync finished\e[0m'
+# Edit version.mk to use SLOBS version instead of Derp
+	sed -i '20s/.*/AOSIP_BUILDTYPE ?= SLOBS/' /root/build/aosip/vendor/aosip/config/version.mk
             ;;
         "Build AOSiP")
             echo -e '\e[104mYou are about to build AOSiP\e[0m'
@@ -55,6 +57,9 @@ do
 			repo sync -c -f -j8 --force-sync --no-clone-bundle --no-tags
 			echo -e '\e[32mSync finished\e[0m'
 			sleep 1
+# Edit version.mk to use SLOBS version instead of Derp
+			sed -i '20s/.*/AOSIP_BUILDTYPE ?= SLOBS/' /root/build/aosip/vendor/aosip/config/version.mk
+# Start AOSiP auto build here
 		echo -e '\e[32mStarting to build\e[0m'
 		source build/envsetup.sh
 		lunch aosip_$devicename-userdebug
