@@ -3,7 +3,7 @@
 	echo -e '\e[104mStarting AOSiP Helper. Press any key to clear the terminal and continue\e[0m'
 	read -n 1 -s
 	clear
-	echo -e '\e[104mBuild and Sync Script v0.9.5c for AOSiP\e[0m'
+	echo -e '\e[104mBuild and Sync Script v0.9.6 for AOSiP\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 	cd ~/build/aosip
 	PATH=~/bin:$PATH
@@ -94,6 +94,14 @@ do
 
             continue
             ;;
+       "Set Jack Server")
+	    export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
+            echo -e '\e[32mSet Jack Server VM Argument to 6g\e[0m' 
+
+            continue
+            ;;
+	    
+	    
         "Quit")
             break
             ;;
