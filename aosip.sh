@@ -1,6 +1,6 @@
 #/bin/bash
 	clear
-	echo -e '\e[104mBuild and Sync Script v0.9.6a for AOSiP\e[0m'
+	echo -e '\e[104mBuild and Sync Script v0.9.6b for AOSiP\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 	cd ~/build/aosip
 	PATH=~/bin:$PATH
@@ -8,7 +8,7 @@
 # Create a main menu with actions
 	echo -e '\e[32mOffering choices to either Sync, Build or Quit\e[0m'
 	PS3='Please enter your choice: '
-	options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Build from Lunch" "Initialize Repo" "Quit")
+	options=("Sync Repo" "Build AOSiP" "Auto Sync and Build" "Build from Lunch" "Initialize Repo" "Set Jack Server" "Quit")
 	select opt in "${options[@]}"
 do
     case $opt in
@@ -24,6 +24,10 @@ do
             ;;
         "Build AOSiP")
             echo -e '\e[104mYou are about to build AOSiP\e[0m'
+		prebuilts/misc/linux-x86/ccache/ccache -M 100G
+		export CCACHE_DIR=/CCACHE
+		export USE_CCACHE=1
+		export CCACHE_COMPRESS=1
             echo -e '\e[32mMarking start of build\e[0m'
             sleep 1
             source build/envsetup.sh
@@ -58,6 +62,10 @@ do
 			sed -i '20s/.*/AOSIP_BUILDTYPE ?= SLOBS/' /root/build/aosip/vendor/aosip/config/version.mk
 # Start AOSiP auto build here
 		echo -e '\e[32mStarting to build\e[0m'
+		prebuilts/misc/linux-x86/ccache/ccache -M 100G
+		export CCACHE_DIR=/CCACHE
+		export USE_CCACHE=1
+		export CCACHE_COMPRESS=1
 		source build/envsetup.sh
 		lunch aosip_$devicename-userdebug
 		echo -e '\e[32mGot ingredients for making Lunch. Time to cook\e[0m'
