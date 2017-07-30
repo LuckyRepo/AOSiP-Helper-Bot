@@ -1,9 +1,6 @@
 #/bin/bash
-	echo -e '\e[32mThis version uses SLEEP to allow for easy reading. 1 second delay is normal operation\e[0m'
-	echo -e '\e[104mStarting AOSiP Helper. Press any key to clear the terminal and continue\e[0m'
-	read -n 1 -s
 	clear
-	echo -e '\e[104mBuild and Sync Script v0.9.6 for AOSiP\e[0m'
+	echo -e '\e[104mBuild and Sync Script v0.9.6a for AOSiP\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 	cd ~/build/aosip
 	PATH=~/bin:$PATH
