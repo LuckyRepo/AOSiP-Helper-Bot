@@ -1,6 +1,6 @@
 #/bin/bash
 	clear
-	echo -e '\e[104mBuild and Sync Script v0.9.6b for AOSiP\e[0m'
+	echo -e '\e[104mBuild and Sync Script v0.9.6c for AOSiP\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 	cd ~/build/aosip
 	PATH=~/bin:$PATH
@@ -28,7 +28,12 @@ do
 		export CCACHE_DIR=/CCACHE
 		export USE_CCACHE=1
 		export CCACHE_COMPRESS=1
-            echo -e '\e[32mMarking start of build\e[0m'
+		cd ~/build/aosip/prebuilts/sdk/tools cd ~/build/aosip/prebuilts/sdk/tools
+		./jack-admin stop-server
+		export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
+		./jack-admin start-server
+            echo -e '\e[32mSet Jack Server to -Xmx6g\e[0m'
+	    echo -e '\e[32mMarking start of build\e[0m'
             sleep 1
             source build/envsetup.sh
 	    echo -e '\e[91mYou will now be asked for your device name. Enter it when prompted.\e[0m'
