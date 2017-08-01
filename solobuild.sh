@@ -1,5 +1,5 @@
 #/bin/bash
-  echo -e '\e[104mSolo Build v0.0.1 for AOSiP\e[0m'
+  echo -e '\e[104mSolo Build v0.0.2 for AOSiP\e[0m'
 # CCACHE
     prebuilts/misc/linux-x86/ccache/ccache -M 100G
 		export CCACHE_DIR=/CCACHE
@@ -7,13 +7,14 @@
 		export CCACHE_COMPRESS=1
     echo -e '\e[96mHelper Bot just set CCACHE to be used.\e[0m'
 # Jack Server Setup
-		cd ~/build/aosip/prebuilts/sdk/tools cd ~/build/aosip/prebuilts/sdk/tools
+		cd ~/build/aosip/prebuilts/sdk/tools
 		./jack-admin stop-server
 		export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
 		./jack-admin start-server
             echo -e '\e[32mSet Jack Server to -Xmx6g\e[0m'
 # Start Build
 	    echo -e '\e[32mMarking start of build\e[0m'
+	    cd ~/build/aosip
             sleep 1
             source build/envsetup.sh
 	    echo -e '\e[91mYou will now be asked for your device name. Enter it when prompted.\e[0m'
