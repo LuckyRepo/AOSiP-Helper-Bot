@@ -1,6 +1,6 @@
 #/bin/bash
 	clear
-	echo -e '\e[104mBuild and Sync Script v0.9.6c for AOSiP\e[0m'
+	echo -e '\e[104mBuild and Sync Script v0.9.6d for AOSiP\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 	cd ~/build/aosip
 	PATH=~/bin:$PATH
@@ -24,28 +24,8 @@ do
             ;;
         "Build AOSiP")
             echo -e '\e[104mYou are about to build AOSiP\e[0m'
-		prebuilts/misc/linux-x86/ccache/ccache -M 100G
-		export CCACHE_DIR=/CCACHE
-		export USE_CCACHE=1
-		export CCACHE_COMPRESS=1
-		cd ~/build/aosip/prebuilts/sdk/tools cd ~/build/aosip/prebuilts/sdk/tools
-		./jack-admin stop-server
-		export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
-		./jack-admin start-server
-            echo -e '\e[32mSet Jack Server to -Xmx6g\e[0m'
-	    echo -e '\e[32mMarking start of build\e[0m'
-            sleep 1
-            source build/envsetup.sh
-	    echo -e '\e[91mYou will now be asked for your device name. Enter it when prompted.\e[0m'
-	    echo -e '\e[32mFor example you can enter\e[0m' '\e[91mangler\e[0m' '\e[32mif you want to build for the Huawei 6P\e[0m'
-	    sleep 2
-	# devicename="USER INPUT"
-		read -p "Enter your device code name: " devicename
-		echo -e '\e[32mYou are going to build for' $devicename '\e[32mdevice model\e[0m'
-            echo -e '\e[32mStarting build\e[0m'
-            sleep 2
-	    lunch aosip_$devicename-userdebug
-            time mka kronic
+		cd ~/build/aosip
+		./solobuild.sh
 	    pause 1
             exit
             ;;
