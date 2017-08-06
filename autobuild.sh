@@ -15,16 +15,29 @@
 # Edit version.mk to use SLOBS version instead of Derp
 			sed -i '20s/.*/AOSIP_BUILDTYPE ?= SLOBS/' /root/build/aosip/vendor/aosip/config/version.mk
 # Start AOSiP auto build here
-		echo -e '\e[32mStarting to build\e[0m'
-		prebuilts/misc/linux-x86/ccache/ccache -M 100G
+# CCACHE
+    prebuilts/misc/linux-x86/ccache/ccache -M 100G
 		export CCACHE_DIR=/CCACHE
 		export USE_CCACHE=1
 		export CCACHE_COMPRESS=1
-		source build/envsetup.sh
-		lunch aosip_$devicename-userdebug
-		echo -e '\e[32mGot ingredients for making Lunch. Time to cook\e[0m'
-			sleep 1
-		time mka kronic
+    echo -e '\e[96mHelper Bot just set CCACHE to be used.\e[0m'
+# Jack Server Setup
+		cd ~/build/aosip/prebuilts/sdk/tools
+		./jack-admin stop-server
+		export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
+		./jack-admin start-server
+            echo -e '\e[32mSet Jack Server to -Xmx6g\e[0m'
+# Start Build
+	    echo -e '\e[32mMarking start of build\e[0m'
+	    cd ~/build/aosip
+            sleep 1
+            source build/envsetup.sh
+            echo -e '\e[32mStarting build\e[0m'
+            sleep 2
+# Lunch
+	    lunch aosip_$devicename-userdebug
+# Build
+            time mka kronic
 			echo -e '\e[32mIf build was successful then you should have a finished ROM in your OUT folder.\e[0m'
 			echo -e '\e[91mAuto Build will now exit.\e[0m'
 			exit
