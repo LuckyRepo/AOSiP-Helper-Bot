@@ -96,3 +96,11 @@ v16.04
 Unsupported Ubuntu Versions
 ---------------
 v14.xx
+
+Test Branch
+---------------
+```bash
+wget https://raw.githubusercontent.com/LuckyRepo/AOSiP-Helper-Bot/test-branch/start.sh
+chmod 777 start.sh
+./start.sh
+```
