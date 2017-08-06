@@ -3,7 +3,7 @@
 	PATH=~/bin:$PATH
 # Usual blah blah blah
 echo -e '\e[91mThis build still contains test code. Not for daily use. Devs Only.\e[0m'
-echo -e '\e[104mStarting AOSiP Helper Bot Updater v1.1.0\e[0m'
+echo -e '\e[104mStarting AOSiP Helper Bot Updater v1.1.2\e[0m'
 		cd AOSiP-Helper-Bot
 		echo -e '\e[96mHelper Bot just changed to Bot folder for updating the script\e[0m'
 		sleep 1
@@ -60,6 +60,9 @@ echo -e '\e[104mStarting AOSiP Helper Bot Updater v1.1.0\e[0m'
 		chmod 777 aosip.sh
 		chmod 777 /root/build.sh
 		chmod 777 update_AHS.sh
+		chmod 777 autobuild.sh
+		chmod 777 syncrepo.sh
+		chmod 777 solobuild.sh
 		echo -e '\e[96mScript Updated. Press any key to quit.\e[0m'
 		read -n 1 -s
 	exit
