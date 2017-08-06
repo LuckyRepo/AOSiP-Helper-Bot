@@ -63,3 +63,4 @@ echo -e '\e[104mStarting AOSiP Helper Bot Updater v1.1.0\e[0m'
 		echo -e '\e[96mScript Updated. Press any key to quit.\e[0m'
 		read -n 1 -s
 	exit
+end
