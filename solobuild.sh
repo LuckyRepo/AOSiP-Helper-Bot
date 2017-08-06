@@ -1,5 +1,7 @@
 #/bin/bash
-  echo -e '\e[104mSolo Build v0.0.2 for AOSiP\e[0m'
+  echo -e '\e[104mSolo Build v0.0.3 for AOSiP\e[0m'
+# Edit version.mk to use SLOBS version instead of Derp
+			sed -i '20s/.*/AOSIP_BUILDTYPE ?= SLOBS/' /root/build/aosip/vendor/aosip/config/version.mk
 # CCACHE
     prebuilts/misc/linux-x86/ccache/ccache -M 100G
 		export CCACHE_DIR=/CCACHE
