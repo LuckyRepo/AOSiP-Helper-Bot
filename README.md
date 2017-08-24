@@ -7,7 +7,7 @@ Use ~/build/aosip as your build folder. Quick Start will automatically set your 
 Quick Setup (Experimental)
 ---------------
 ```bash
-wget https://raw.githubusercontent.com/LuckyRepo/AOSiP-Helper-Bot/test-branch/start.sh
+wget https://raw.githubusercontent.com/LuckyRepo/AOSiP-Helper-Bot/oreo/start.sh
 chmod 777 start.sh
 ./start.sh
 ```
