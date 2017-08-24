@@ -36,8 +36,8 @@ do
             sleep 1
 	    echo -e '\e[91mPress any key to confirm you want to Initialize AOSiP\e[0m'
 	    read -n 1 -s
-            echo -e '\e[32mSetting nougat-mr2 as your branch. You can not currently change this.\e[0m'
-            repo init -u ssh://git@github.com/AOSiP/platform_manifest.git -b nougat-mr2
+            echo -e '\e[32mSetting oreo as your branch. You can not currently change this.\e[0m'
+            repo init -u ssh://git@github.com/AOSiP/platform_manifest.git -b oreo
             echo -e '\e[32mRepo ready to go\e[0m' 
 
             continue
