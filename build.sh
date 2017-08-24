@@ -1,10 +1,10 @@
 #/bin/bash
-	echo -e '\e[104mSuper Lazy Open Build Script v1.0.1 for AOSiP\e[0m'
-	chmod 777 ~/build/aosip/AOSiP-Helper-Bot/update_AHS.sh
-	cd ~/build/aosip
+	echo -e '\e[104mSuper Lazy Open Build Script v1.1.0 for AOSiP\e[0m'
+	chmod 777 ~/build/oreo/aosip/AOSiP-Helper-Bot/update_AHS.sh
+	cd ~/build/oreo/aosip
 # Assign the build path on launch
-	line=$(head -n 1 buildpath.txt)
-	cd $line
+#	line=$(head -n 1 buildpath.txt)
+#	cd $line
 # Create a Main Menu with actions
 	PS3='Please enter your choice: '
 	options=("AOSiP Helper Script" "Check for updates" "Setup" "Quit")
@@ -33,7 +33,7 @@
         echo -e '\e[96mSetting up SLOBS. Deleted buildpath.txt\e[0m'
 # Assign the build path from AOSiP build folder
     		read -p "Enter your build path for AOSiP: " buildpath
-    		echo $buildpath >> buildpath.txt
+    		echo $buildpath >> buildpathoreo.txt
         echo -e '\e[96mStored build path. Your settings are saved.\e[0m'
         echo -e '\e[91mSLOBS is now auto shutting down. Relaunch to see settings applied.\e[0m'	
 # Shutdown to avoid errors
