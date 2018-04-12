@@ -41,13 +41,6 @@ To use, change to your build directory for AOSiP (example "cd ~/build/AOSiP") th
 
 That's it.
 
-Updating Script (Easy Way)
----------------
-```bash
-./update_AHS.sh
-```
-This is only grabbing the helper script if changes have been made. Otherwise it let you know everything is up to date.
-
 Super Lazy Open Build Script for AOSiP
 ---------------
 Changing to your build path each time you log on to your build server can be a chore. Let's be even more lazy.
@@ -65,6 +58,12 @@ You can now use the SLOBS. Now instead of launching from your build directory wi
 ./build.sh
 ```
 
+Updating Script (Easy Way)
+---------------
+```bash
+./update_AHS.sh
+```
+This is only grabbing the helper script if changes have been made. Otherwise it let you know everything is up to date.
 
 Updating Script (Manually)
 ---------------
